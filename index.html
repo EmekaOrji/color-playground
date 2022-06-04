@@ -13,7 +13,7 @@
   <h1>Basics of CSS - Module 1</h1>
 
   <div class="play-area">
-    <div class="slides-container">
+    <div class="slides__container">
       <div class="slide red-slide">
         <input id="redValueInput" type="range" min=0 max=255 value=30 oninput="redValueDisplay.textContent = this.value" />
         <p id="redValueDisplay"></p>
@@ -31,9 +31,12 @@
         <p id="alphaValueDisplay"></p>
       </div>
     </div>
-    <div id="colorDisplay">
-      <h2 id="rgbDisplay"></h2>
-      <button id="toggleButton">RGB</button>
+    <div class="color-display__container">
+      <h1 class="transparent">CSS is fun!</h1>
+      <div id="colorDisplay">
+        <h2 id="rgbDisplay"></h2>
+        <button id="toggleButton">RGB</button>
+      </div>
     </div>
   </div>
 
