@@ -194,7 +194,7 @@ h1.transparent {
   .slide {
     height: 3.3em;
   }
-  #colorDisplay {
+  .color-display__container {
     order: 1;
   }
 }
