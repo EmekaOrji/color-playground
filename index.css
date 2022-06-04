@@ -172,10 +172,14 @@ h1 {
     flex-direction: column;
   }
   .slides-container {
+    order: 2;
     padding-top: 1em;
     padding-bottom: 1em;
   }
   .slide {
     height: 3.3em;
+  }
+  #colorDisplay {
+    order: 1;
   }
 }

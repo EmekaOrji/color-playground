@@ -15,7 +15,7 @@ toggleButton.addEventListener("click", () => {
 
 function setColor() {
   if (isRGB === true) {
-    toggleButton.textContent = "HEX";
+    toggleButton.textContent = "RGB";
     red = inputs[0].value;
     green = inputs[1].value;
     blue = inputs[2].value;
@@ -24,7 +24,7 @@ function setColor() {
     document.getElementById("rgbDisplay").textContent = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
     document.getElementById("colorDisplay").style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
   } else {
-    toggleButton.textContent = "RGB";
+    toggleButton.textContent = "HEX";
     red = parseInt(inputs[0].value).toString(16);
     green = parseInt(inputs[1].value).toString(16);
     blue = parseInt(inputs[2].value).toString(16);
