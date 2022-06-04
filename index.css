@@ -178,6 +178,7 @@ h1.transparent {
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
