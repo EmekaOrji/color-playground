@@ -1,5 +1,6 @@
 var inputs = document.querySelectorAll("#redValueInput, #greenValueInput, #blueValueInput, #alphaValueInput");
 var inputsNumbers = document.querySelectorAll("#redValueDisplay, #greenValueDisplay, #blueValueDisplay, #alphaValueDisplay");
+var colorDisplay = document.getElementById("colorDisplay");
 var toggleButton = document.getElementById("toggleButton");
 var red, green, blue, alpha;
 var isRGB = true;
@@ -39,4 +40,28 @@ function setColor() {
   inputsNumbers[1].textContent = green;
   inputsNumbers[2].textContent = blue;
   inputsNumbers[3].textContent = alpha;
+}
+
+
+
+colorDisplay.onclick = function () {
+  document.execCommand("copy");
+};
+
+colorDisplay.addEventListener("copy", function (event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", colorDisplay.textContent);
+    console.log(event.clipboardData.getData("text"));
+    setSuccessMessage("Color code copied", 1000);
+  }
+});
+
+const successMessage = document.getElementById("successMessage");
+function setSuccessMessage(message, duration = 3000) {
+  successMessage.classList.add("error--show");
+  successMessage.innerHTML = message;
+  setTimeout(() => {
+    successMessage.classList.remove("error--show");
+  }, duration);
 }
