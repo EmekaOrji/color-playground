@@ -7,24 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Color Play</title>
   <link rel="stylesheet" href="index.css">
+  <!-- for the minified version -->
+  <script src="https://cdn.jsdelivr.net/gh/EmekaOrji/loud-it@1.0.1/assets/js/loud-it.min.js" type='module'></script>
 </head>
 
 <body>
-  <div id="successMessage"></div>
-  <h1>Basics of CSS - Module 1</h1>
+  <header>
+    <h1>Color Playground</h1>
+    <p>(Tap to edit, Double tap to copy)</p>
+  </header>
 
   <div class="play-area">
     <div class="slides__container">
       <div class="slide red-slide">
-        <input id="redValueInput" type="range" min=0 max=255 value=30 oninput="redValueDisplay.textContent = this.value" />
+        <input id="redValueInput" type="range" min=0 max=255 value=240 oninput="redValueDisplay.textContent = this.value" />
         <p id="redValueDisplay"></p>
       </div>
       <div class="slide green-slide">
-        <input id="greenValueInput" type="range" min=0 max=255 value=30 oninput="greenValueDisplay.textContent = this.value" />
+        <input id="greenValueInput" type="range" min=0 max=255 value=127 oninput="greenValueDisplay.textContent = this.value" />
         <p id="greenValueDisplay"></p>
       </div>
       <div class="slide blue-slide">
-        <input id="blueValueInput" type="range" min=0 max=255 value=180 oninput="blueValueDisplay.textContent = this.value" />
+        <input id="blueValueInput" type="range" min=0 max=255 value=15 oninput="blueValueDisplay.textContent = this.value" />
         <p id="blueValueDisplay"></p>
       </div>
       <div class="slide alpha-slide">
@@ -35,13 +39,13 @@
     <div class="color-display__container">
       <h1 class="transparent">CSS is fun!</h1>
       <div id="colorDisplay">
-        <h2 id="rgbDisplay"></h2>
+        <div style='white-space: nowrap;' id="rgbDisplay" autofocus contenteditable></div>
       </div>
       <button id="toggleButton">RGB</button>
     </div>
   </div>
 
-  <script src="index.js"></script>
+  <script src="index.js" type='module'></script>
 </body>
 
 </html>

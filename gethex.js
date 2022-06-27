@@ -1,0 +1,1 @@
+var getHex=(n=0)=>{let r=0,d=n,v=[];while(d>0){r=parseInt(d%16),d=parseInt(d/16),r=r===10?'a':r===11?'b':r===12?'c':r===13?'d':r===14?'e':r===15?'f':r,v.push(r.toString())}v.length === 1 && v.push('0');return n===0?'00':v.reverse().join("")};export default getHex;

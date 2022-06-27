@@ -6,10 +6,19 @@ body {
   margin: 0;
   padding: 0;
 }
-h1 {
-  font-size: min(8vw, 4em);
+header {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+}
+h1 {
+  font-size: min(8vw, 4em);
+  margin: 0;
+  margin-top: min(.8em, 10vw);
+}
+header p {
+  margin: 0;
+  margin-bottom: .8em;
+  color: #0009;
 }
 .play-area {
   width: 80%;
@@ -161,9 +170,19 @@ h1.transparent {
   align-items: center;
 }
 #rgbDisplay {
+  min-width: 30px;
+  background-color: #fff4;
   text-shadow: 1px 1px 3px #0005;
   color: #fff;
+  font-size: 2em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  border-radius: .3em;
+  outline: none;
+  padding: .3em;
+}
+#rgbDisplay:focus {
+  outline: 1px solid;
 }
 #toggleButton {
   width: 3em;
@@ -187,30 +206,6 @@ h1.transparent {
 #toggleButton:active {
   background-color: #000;
   color: #fff;
-}
-
-#successMessage {
-	width: min(500px, 80vw);
-	background-color: #4a990077;
-	opacity: 0;
-	color: #fff;
-	font-size: min(1.5em, 6vw);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	font-weight: 900;
-	position: fixed;
-	top: -10%;
-	right: 50%;
-  transform: translateX(50%);
-	padding: 1em;
-	border-radius: 1em;
-	transition: all 500ms cubic-bezier(0,1,.39,1.33);
-	z-index: 100002;
-	cursor: default;
-	pointer-events: none;
-}
-#successMessage.error--show {
-	opacity: 1;
-	top: 10%;
 }
 
 
